@@ -43,11 +43,11 @@ $hotels = [
 
 /* var_dump($hotels); */
 
-foreach ($hotels as $hotel) {
-    /* var_dump($hotel); */
-    /* var_dump($hotel['name']); */
-    echo $hotel['name'] . ' <br> ' . $hotel['description'] . ' <br>  ' . $hotel['vote'] . ' <br>  ' . $hotel['distance_to_center'] . ' <br>  ';
-}
+/* foreach ($hotels as $hotel) {
+var_dump($hotel);
+var_dump($hotel['name']);
+echo $hotel['name'] . ' <br> ' . $hotel['description'] . ' <br>  ' . $hotel['vote'] . ' <br>  ' . $hotel['distance_to_center'] . ' <br>  ';
+} */
 
 ?>
 
@@ -63,12 +63,18 @@ foreach ($hotels as $hotel) {
     <title>PHP Hotels</title>
 </head>
 
-<body>
+<body class="bg-secondary">
     <h1 class="text-danger text-center">PHP Hotels</h1>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <?php echo $hotel['name'] ?>
+        <div class="row d-flex">
+            <div class="col text-center fs-4">
+                <?php foreach ($hotels as $hotel) {
+                    echo 'Nome: ' . $hotel['name'] . ' <br> ';
+                    echo 'Descrizione: ' . $hotel['description'] . ' <br> ';
+                    echo 'Voto: ' . $hotel['vote'] . ' <br> ';
+                    echo 'Distanza dal centro: ' . $hotel['distance_to_center'] . ' km' . ' <br> ' . ' <hr> ';
+                }
+                ?>
             </div>
         </div>
     </div>
