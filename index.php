@@ -41,6 +41,28 @@ $hotels = [
 
 ];
 
-var_dump($hotels);
+/* var_dump($hotels); */
+
+foreach ($hotels as $hotel) {
+    /* var_dump($hotel); */
+    /* var_dump($hotel['name']); */
+    echo $hotel['name'] . ' - ' . $hotel['description'] . ' - ' . $hotel['parking'] . ' - ' . $hotel['vote'] . ' - ' . $hotel['distance_to_center'];
+}
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Hotels</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
