@@ -64,7 +64,14 @@ foreach ($hotels as $hotel) {
 </head>
 
 <body>
-
+    <h1 class="text-danger text-center">PHP Hotels</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <?php echo $hotel['name'] ?>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
